@@ -85,7 +85,7 @@ export default Vue.extend({
   },
   data() {
     return {
-      gradient: ['#ff0000', '#00ff00'],
+      gradient: [] as string[],
       direction: 'to right',
       links: {
         size: '32'
@@ -103,6 +103,13 @@ export default Vue.extend({
       handler() {
         this.css = this.generateCss()
       }
+    }
+  },
+  created() {
+    const defaultColorsNumber = 2
+
+    for (let i = 0; i < defaultColorsNumber; i += 1) {
+      this.gradient.push(this.randomHexColor())
     }
   },
   methods: {
