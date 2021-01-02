@@ -1,0 +1,11 @@
+button {
+  appearance: none;
+  border: 1px solid $dark;
+  background: transparent;
+  padding: 0.5rem 0.75rem;
+  color: $light;
+  border-radius: 0.25rem;
+  backdrop-filter: contrast(40%) blur(5px);
+  cursor: pointer;
+  margin: 0;
+}
