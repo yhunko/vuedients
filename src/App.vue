@@ -12,11 +12,11 @@
     <header>
       <h1 class="brand">Vuedients</h1>
       <div class="links">
-        <LogoGithubIcon
-          href="https://github.com/"
-          :w="links.size"
-          :h="links.size"
-        />
+        <span
+          @click="openURL('https://github.com/yegorgunko/vuedients/tree/dev')"
+        >
+          <LogoGithubIcon :w="links.size" :h="links.size" />
+        </span>
       </div>
     </header>
     <main>
@@ -130,6 +130,9 @@ export default Vue.extend({
     },
     async copyCss() {
       await navigator.clipboard.writeText(this.css)
+    },
+    openURL(url: string) {
+      window.open(url, '_blank')
     }
   }
 })
