@@ -47,7 +47,7 @@ html,
       display: inline-flex;
       align-items: center;
 
-      & > * {
+      span {
         cursor: pointer;
       }
     }
